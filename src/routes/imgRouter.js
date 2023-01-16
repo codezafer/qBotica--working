@@ -1,7 +1,7 @@
 const IMAGEROUTER = {
     headerlogo: require('../assets/img/logo.png'),
     AppLogo: require('../assets/img/logo-color.png'),
-    Avatar: require('../assets/img/profiles/avatar.jpg'),
+    Avatar: require('../assets/img/profile/avatar.jpg'),
     User: require('../assets/img/user.jpg'),
     Img_01: require('../assets/img/img-01.jpg'),
     PlaceHolder: require('../assets/img/placeholder.jpg'),

@@ -5,5 +5,6 @@ export const ROUTES = {
     CreatePassword:'/createpassword',
     ForgotPassword: '/forgotpassword',
     OTP:'/otp',
+    ERROR: '/error404',
     DefaultLayout:'/defaultlayout/*',
 }

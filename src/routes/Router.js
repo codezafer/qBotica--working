@@ -29,11 +29,12 @@ import "../assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css";
 import "../assets/css/bootstrap-datetimepicker.min.css";
 import '../assets/css/style.css';
 
-import Loginpage from '../pages/Login/Login';
+import Loginpage from '../pages/Login/Login.Component';
 import Registrationpage from '../pages/Register/Register';
 import CreatePassword from '../pages/Create-password/Create_password';
 import Forgotpassword from '../pages/Forgot-Password/Forgot_password';
 import OTPscreen from '../pages/OTP/Otp';
+import Error404 from '../pages/ErrorPage/error404'
 
 // import DefaultLayout from '../pages/Default-layout';
 import AppLayout from '../pages/Default-layout';
@@ -58,7 +59,7 @@ const Router = () => {
         <Route exact path={ROUTES.CreatePassword} element={<RouteWithRole Element={CreatePassword} />}></Route>
         <Route exact path={ROUTES.ForgotPassword} element={<RouteWithRole Element={Forgotpassword} />}></Route>
         <Route exact path={ROUTES.OTP} element={<RouteWithRole Element={OTPscreen} />}></Route>
-        <Route exact path={ROUTES.DefaultLayout} element={<RouteWithRole Element={AppLayout} />}></Route>
+        <Route exact path='*' element={<RouteWithRole Element={Error404} />}></Route>
       </Routes>
     </div>
   )

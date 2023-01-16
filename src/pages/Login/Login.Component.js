@@ -5,17 +5,12 @@ import { useForm, Controller } from 'react-hook-form'
 import { emailrgx } from '../../constant/index'
 import { setTempEmailId, clearTempEmailId } from '../../utils/storageConstants'
 import IMAGEROUTER from '../../routes/imgRouter';
-// import axios from 'axios'
+import { connect } from 'react-redux';
 
 
 const Loginpage = (props) => {
-
+console.log(props, 'props')
   const [eye, seteye] = useState(true);
-
-
-
-  const [emailId, setEmailId] = useState("")
-  const [password, setPassword] = useState("")
   const [successMsg, setSuccessMsg] = useState("")
 
   const {
@@ -32,25 +27,25 @@ const Loginpage = (props) => {
   }, [emailId])
 
 
-  async function loginApi() {
-    const url = "http://localhost:3000/login";
-    const inputs = JSON.stringify({ emailId, password })
-    const options = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json",
-      },
-      body: inputs,
-    }
-    try {
-      const req = await fetch(url, options);
-      const res = await req.json();
-      console.log(req);
-      return res;
-    } catch (err) { console.log(err) }
+  // async function loginApi() {
+  //   const url = "http://localhost:3000/login";
+  //   const inputs = JSON.stringify({ emailId, password })
+  //   const options = {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       "Accept": "application/json",
+  //     },
+  //     body: inputs,
+  //   }
+  //   try {
+  //     const req = await fetch(url, options);
+  //     const res = await req.json();
+  //     console.log(req);
+  //     return res;
+  //   } catch (err) { console.log(err) }
 
-  }
+  // }
 
   const LoginSubmit = async (e) => {
     e.preventDefault();
